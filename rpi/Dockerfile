@@ -186,7 +186,7 @@ RUN ./configure --enable-shared --prefix=/usr && \
     make install
 
 # x265
-WORKDIR /root/build/x265/build/linux
+WORKDIR /root/build/x265/build/arm-linux
 RUN cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr ../../source && \
     make && \
     make install
