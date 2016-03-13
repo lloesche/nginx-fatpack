@@ -238,6 +238,8 @@ RUN ./configure --prefix=/usr --enable-gpl --enable-nonfree --enable-libfdk-aac 
 # cleanup
 WORKDIR /root
 RUN rm -rf build
+RUN mv -f /usr/share/bin/resty /usr/bin/ && \
+    rmdir /usr/share/bin
 
 RUN apt-get -yf remove --auto-remove \
 	build-essential \
