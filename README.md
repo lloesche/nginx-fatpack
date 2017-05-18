@@ -1,5 +1,5 @@
 # nginx-fatpack
-nginx/openresty/rtsp/ffmpeg Docker image with lots of modules for video streaming app server
+nginx/openresty/rtmp/ffmpeg Docker image with lots of modules for video streaming app server
 
 You can `docker run lloesche/nginx-fatpack`. You likely also want to volume mount /etc/nginx with a custom config.
 Image uses openresty as base nginx plus several useful modules including rtsp support. Also includes ffmpeg for live transcoding.
