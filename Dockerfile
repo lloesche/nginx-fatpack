@@ -2,10 +2,10 @@ FROM debian:jessie
 
 MAINTAINER Lukas Loesche "lloesche@fedoraproject.org"
 
-ENV OPENRESTY_VERSION 1.9.7.3
+ENV OPENRESTY_VERSION 1.11.2.3
 ENV LAME_VERSION 3.99.5
 ENV LIBOGG_VERSION 1.3.2
-ENV LIBVORBIS_VERSION 1.3.4
+ENV LIBVORBIS_VERSION 1.3.5
 
 # prep
 RUN mkdir -p /root/build
@@ -238,7 +238,7 @@ RUN ./configure --prefix=/usr --enable-gpl --enable-nonfree --enable-libfdk-aac 
 # cleanup
 WORKDIR /root
 RUN rm -rf build
-RUN mv -f /usr/share/bin/resty /usr/bin/ && \
+RUN mv -f /usr/share/bin/* /usr/bin/ && \
     rmdir /usr/share/bin
 
 RUN apt-get -yf remove --auto-remove \
